@@ -7,11 +7,13 @@
 
 A skill that replicates how Claude talks and writes, anchored on the Opus 5 era.
 This is not a rewriter — it is a dialect transplant.
+
 With it installed, your agent does not get smarter: it gets more **Claude**. Every reply carries the flavor — the em dash arrives early, the triads follow, and the bolded phrases do the navigating; the longer the chat, the heavier the accent. Paste any text, and it steps into rewrite mode, rewriting as Claude would have — then steps back into chat, as if nothing had happened.
 
-## 安装:一行命令,各回各家 / Install: one command, each to its own home
+## 安装 / Install
 
 推荐用 skills 安装器——一条命令,Claude Code 与 Codex 各回各家:装进共享目录 ~/.agents/skills,再软链到位。
+
 The recommended way is the skills installer — one command, and Claude Code and Codex each find their way home: it installs into the shared ~/.agents/skills and symlinks into place.
 
 ```bash
@@ -24,7 +26,9 @@ npx skills add zyang0107/claudeify -a claude-code codex -g -y
 npx skills update -g -y
 ```
 
-爱折腾的,也可以手动克隆——目标路径见注释 / Prefer to tinker? Clone by hand — the comments show the way:
+爱折腾的,也可以手动克隆——目标路径见注释:
+
+Prefer to tinker? Clone by hand — the comments show the way:
 
 ```bash
 # Claude Code
@@ -36,9 +40,10 @@ git clone https://github.com/zyang0107/claudeify .agents/skills/claudeify
 ```
 
 其余兼容 Agent Skills 开放标准的工具(Gemini CLI、Cursor、GitHub Copilot、Goose……),把目录放进它们各自的 skills 位置——方言不分家。
+
 For other Agent-Skills-compatible tools (Gemini CLI, Cursor, GitHub Copilot, Goose…), place the folder in their skills location — the dialect travels.
 
-## 用法:聊天是默认,改写是即兴 / Usage: chat by default, rewrite as improv
+## 用法 / Usage
 
 显式调用:输入 /claudeify 或点名 claudeify。它默认进入人设聊天模式——这不是缺陷,而是论题:那股味儿最浓的地方,本来就是聊天。
 丢一段文本给它,它切换进改写模式,改完自动回到聊天。
