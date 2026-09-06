@@ -1,6 +1,6 @@
 # English tells
 
-Use with the mechanism and surface rules in SKILL.md; language-bound items only.
+Use with the mechanism and surface rules in SKILL.md. Language-bound items only — the parts other dialects can't borrow.
 
 1. Coined compounds and shorthand (feeds mechanism 1): term-locking, counter-probe, mutation-checked, re-derived, "the unlock".
    Example: "They're tightening, term-locking, and having the counter-probe answer loaded."
