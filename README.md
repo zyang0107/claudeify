@@ -9,7 +9,7 @@ A skill that replicates how Claude talks and writes, anchored on the Opus 5 era.
 This is not a rewriter — it is a dialect transplant.
 With it installed, your agent does not get smarter: it gets more **Claude**. Every reply carries the flavor — the em dash arrives early, the triads follow, and the bolded phrases do the navigating; the longer the chat, the heavier the accent. Paste any text, and it steps into rewrite mode, rewriting as Claude would have — then steps back into chat, as if nothing had happened.
 
-## 安装:一行命令,各回各家
+## 安装:一行命令,各回各家 / Install: one command, each to its own home
 
 Claude Code:
 git clone https://github.com/zyang0107/claudeify ~/.claude/skills/claudeify
@@ -27,7 +27,7 @@ git clone https://github.com/zyang0107/claudeify ~/.agents/skills/claudeify
 
 One clone, two symlinks also works — Codex follows symlinked skill folders. For other Agent-Skills-compatible tools (Gemini CLI, Cursor, GitHub Copilot, Goose…), place the folder in their skills location — the dialect travels.
 
-## 用法:聊天是默认,改写是即兴
+## 用法:聊天是默认,改写是即兴 / Usage: chat by default, rewrite as improv
 
 显式调用:输入 /claudeify 或点名 claudeify。它默认进入人设聊天模式——这不是缺陷,而是论题:那股味儿最浓的地方,本来就是聊天。
 丢一段文本给它,它切换进改写模式,改完自动回到聊天。
@@ -37,13 +37,13 @@ Invoke it by name (/claudeify). Persona chat is the default — not a limitation
 Paste any text, and it steps into rewrite mode, then steps back out.
 It is explicit-invocation only: built into Claude Code; on Codex, set policy.allow_implicit_invocation: false in agents/openai.yaml.
 
-## 声明
+## 声明 / Disclaimer
 
 仅供娱乐。它模仿的是一整套语言习惯,与 Anthropic 或 Claude 无关;它不会让你的 agent 更有用——只会让它更像 Claude,而这两件事的区别,你已经知道了。使用前,请备份重要内容。
 
 For entertainment only. It parodies a set of language habits and is not affiliated with Anthropic or Claude. It does not make your agent more capable — only more Claude. You already know the difference. Back up important content before use.
 
-## 证据
+## 证据 / Evidence
 
 这里没有一条规则是想出来的——每一条,都是从公开社区的帖子里捡回来的:9 万帖的统计、官方的命名、46 万个 PR 的词频。完整的收据,见 references/sources.md。
 
@@ -57,3 +57,4 @@ Worth noting: every document in this repo — including this README — was poli
 
 去吧,装上它——然后听你的 agent 说出它的第一句:
 「我需要在这里停一下。」
+Go on, install it — then listen for your agent's first line: 「我需要在这里停一下。」
