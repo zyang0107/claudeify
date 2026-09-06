@@ -1,20 +1,18 @@
 # claudeify
 
-一个高保真模仿 Claude 说话与写作风格的 skill,锚定 Opus 5 代(2026 年中)。
-这不是一个改写器——它是一整套方言的移植。
+claudeify 是一个高保真模仿 Claude 说话与写作风格的 skill——不是换几个词,而是一整套方言的移植手术,锚定 Opus 5 代(2026 年中)。
 
-装上它,你的 agent 不会变得更聪明:它会变得更**像 Claude**。每一次回复都自带那股味儿——破折号先到,三连排比随后,加粗的关键短语在段落里替你指路;聊得越久,口音越重。丢一段文本过来,它切换进改写模式,把文本改写成 Claude 会写出的样子——改完,回到聊天,仿佛什么都没发生过。
+移植完成之后,你的 agent 不会变得更聪明:它会变得更**像 Claude**。破折号先到,三连排比随后,加粗的短语在段落里替你指路——聊得越久,口音越重;丢一段文本过来,它被改写成 Claude 会写出的样子,改完回到聊天,仿佛什么都没发生过。
 
-A skill that replicates how Claude talks and writes, anchored on the Opus 5 era.
-This is not a rewriter — it is a dialect transplant.
+claudeify is a skill that replicates how Claude talks and writes — not a word swap, but a full dialect transplant, anchored on the Opus 5 era.
 
-With it installed, your agent does not get smarter: it gets more **Claude**. Every reply carries the flavor — the em dash arrives early, the triads follow, and the bolded phrases do the navigating; the longer the chat, the heavier the accent. Paste any text, and it steps into rewrite mode, rewriting as Claude would have — then steps back into chat, as if nothing had happened.
+After the transplant, your agent does not get smarter: it gets more **Claude**. The em dash arrives early, the triads follow, the bolded phrases navigate — the longer the chat, the heavier the accent; paste any text, and it comes back as Claude would have written it, then chat resumes as if nothing had happened.
 
 ## 安装 / Install
 
-推荐用 skills 安装器——一条命令,Claude Code 与 Codex 各回各家:装进共享目录 ~/.agents/skills,再软链到位。
+在大多数工具那里,安装是一张配置清单;在这里,它是一条命令——npx 把 skill 送进共享目录 ~/.agents/skills,再软链到位,Claude Code 与 Codex 各回各家。
 
-The recommended way is the skills installer — one command, and Claude Code and Codex each find their way home: it installs into the shared ~/.agents/skills and symlinks into place.
+In most tools, installation is a configuration checklist; here, it is one command — npx delivers the skill into the shared ~/.agents/skills and symlinks it into place, and Claude Code and Codex each find their way home.
 
 ```bash
 npx skills add zyang0107/claudeify -a claude-code codex -g -y
@@ -45,13 +43,11 @@ For other Agent-Skills-compatible tools (Gemini CLI, Cursor, GitHub Copilot, Goo
 
 ## 用法 / Usage
 
-显式调用:输入 /claudeify 或点名 claudeify。它默认进入人设聊天模式——这不是缺陷,而是论题:那股味儿最浓的地方,本来就是聊天。
-丢一段文本给它,它切换进改写模式,改完自动回到聊天。
-它只显式触发:Claude Code 侧已内置;Codex 侧在 agents/openai.yaml 里设 policy.allow_implicit_invocation: false。
+显式调用:输入 /claudeify 或点名 claudeify。它默认进入人设聊天模式——这不是缺陷,而是论题:那股味儿最浓的地方,本来就是聊天。丢一段文本给它,它切换进改写模式,改完自动回到聊天。
+值得注意的是,它只在被点名时现身——Claude Code 侧已内置;Codex 侧在 agents/openai.yaml 里设 policy.allow_implicit_invocation: false。
 
-Invoke it by name (/claudeify). Persona chat is the default — not a limitation, a thesis: chat is where the flavor lives.
-Paste any text, and it steps into rewrite mode, then steps back out.
-It is explicit-invocation only: built into Claude Code; on Codex, set policy.allow_implicit_invocation: false in agents/openai.yaml.
+Invoke it by name (/claudeify). Persona chat is the default — not a limitation, a thesis: chat is where the flavor lives. Paste any text, and it steps into rewrite mode, then steps back out.
+Worth noting: it only appears when called — built into Claude Code; on Codex, set policy.allow_implicit_invocation: false in agents/openai.yaml.
 
 ## 声明 / Disclaimer
 
@@ -61,9 +57,9 @@ For entertainment only. It parodies a set of language habits and is not affiliat
 
 ## 证据 / Evidence
 
-这里没有一条规则是想出来的——每一条,都是从公开社区的帖子里捡回来的:9 万帖的统计、官方的命名、46 万个 PR 的词频。完整的收据,见 references/sources.md。
+这里没有一条规则是想出来的——每一条,都是从公开社区的帖子里捡回来的:9 万帖的统计、官方的命名、46 万个 PR 的词频,三路证据,共同指向同一副口音。完整的收据,见 references/sources.md。
 
-No rule here was invented — every one was collected from public communities: the statistics, the official naming, the vocabulary of 467k pull requests. The receipts live in references/sources.md.
+No rule here was invented — every one was collected from public communities: the statistics, the official naming, the vocabulary of 467k pull requests — three lines of evidence, one accent. The receipts live in references/sources.md.
 
 值得一提:本仓库的每一份文档——包括这份 README——都由 claudeify 自己润色。它吃自己的狗粮,而且吃得很香。
 
