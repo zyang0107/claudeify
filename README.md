@@ -11,21 +11,32 @@ With it installed, your agent does not get smarter: it gets more **Claude**. Eve
 
 ## 安装:一行命令,各回各家 / Install: one command, each to its own home
 
-Claude Code:
+推荐用 skills 安装器——一条命令,Claude Code 与 Codex 各回各家:装进共享目录 ~/.agents/skills,再软链到位。
+The recommended way is the skills installer — one command, and Claude Code and Codex each find their way home: it installs into the shared ~/.agents/skills and symlinks into place.
+
+```bash
+npx skills add zyang0107/claudeify -a claude-code codex -g -y
+```
+
+更新 / Updates:
+
+```bash
+npx skills update -g -y
+```
+
+爱折腾的,也可以手动克隆——目标路径见注释 / Prefer to tinker? Clone by hand — the comments show the way:
+
+```bash
+# Claude Code
 git clone https://github.com/zyang0107/claudeify ~/.claude/skills/claudeify
-
-Codex:
+# Codex
 git clone https://github.com/zyang0107/claudeify ~/.agents/skills/claudeify
+# 项目级 / Project-level(任何标准兼容工具 / any standard-compatible tool)
+git clone https://github.com/zyang0107/claudeify .agents/skills/claudeify
+```
 
-克隆一次、两处软链也可以——Codex 支持符号链接的 skill 目录。其余兼容 Agent Skills 开放标准的工具(Gemini CLI、Cursor、GitHub Copilot、Goose……),把目录放进它们各自的 skills 位置——方言不分家。
-
-Claude Code:
-git clone https://github.com/zyang0107/claudeify ~/.claude/skills/claudeify
-
-Codex:
-git clone https://github.com/zyang0107/claudeify ~/.agents/skills/claudeify
-
-One clone, two symlinks also works — Codex follows symlinked skill folders. For other Agent-Skills-compatible tools (Gemini CLI, Cursor, GitHub Copilot, Goose…), place the folder in their skills location — the dialect travels.
+其余兼容 Agent Skills 开放标准的工具(Gemini CLI、Cursor、GitHub Copilot、Goose……),把目录放进它们各自的 skills 位置——方言不分家。
+For other Agent-Skills-compatible tools (Gemini CLI, Cursor, GitHub Copilot, Goose…), place the folder in their skills location — the dialect travels.
 
 ## 用法:聊天是默认,改写是即兴 / Usage: chat by default, rewrite as improv
 
@@ -55,6 +66,4 @@ Worth noting: every document in this repo — including this README — was poli
 
 ---
 
-去吧,装上它——然后听你的 agent 说出它的第一句:
-「我需要在这里停一下。」
 Go on, install it — then listen for your agent's first line: 「我需要在这里停一下。」
