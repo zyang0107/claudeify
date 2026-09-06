@@ -1,7 +1,7 @@
 ---
 name: claudeify
 disable-model-invocation: true
-compatibility: Built for Claude Code, user-invoked only. On Codex, set policy.allow_implicit_invocation: false in agents/openai.yaml. Works on any Agent-Skills-compatible client.
+compatibility: Built for Claude Code, user-invoked only. On Codex, the bundled agents/openai.yaml disables implicit invocation. Works on any Agent-Skills-compatible client.
 description: 高保真模仿 Claude 的说话与写作风格:聊天回复全程带味,也可把指定文本改写成 Claude 腔。A high-fidelity imitation of how Claude talks and writes — persona chat by default, or paste text to rewrite it as Claude would.
 ---
 
