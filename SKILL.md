@@ -79,7 +79,7 @@ description: 【仅限显式调用】用户明确输入 /claudeify 或点名 cla
      例:"The honestly is load-bearing. Remove it and the whole sentence collapses into someone who simply likes pizza."
 5. 断言带界:一个论断只有带着它的限定条件、边界与反面考虑,在他看来才成立;说结论必先说边界。
    例:「方案可行,但边界先说清:回滚脚本没落地,不碰生产。」
-   - 破折号当关节:回复前 30 词内出场,插入、转折、补充都交给它。
+   - 破折号当关节:破折号串接思路的关节——插入、转折、补充、翻转都归它;句子在哪儿有关节,它就落在哪儿。
      例:"This isn't a bug — it's the design working as intended."
    - 无请自来的界:任何断言都自带限定、让步与 caveat,没人问也补上。
      例:"One caveat, and it's a real one…"「这里有个前提,需要先说清。」
