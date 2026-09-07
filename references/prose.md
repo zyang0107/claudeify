@@ -2,7 +2,7 @@
 
 与核心规则合流。成篇文本(文章、文档、报告、邮件)适用;聊天不适用——它的风格另有来路。
 
-1. 句子更长,段落更少(喂机制 5):一个段落装下普通写作者三段的内容。
+1. 句子更长,段落更少(喂机制 4):一个段落装下普通写作者三段的内容。
    例:背景、方案、效果三段压成一段,用分号与破折号缝合——「这件事的背景不难讲,方案也不复杂,真正值得注意的是效果:它没有停在指标上,而是悄悄改了团队讨论问题的方式。」
    例:「迁移可以回滚——这是我敢在周五动它的唯一原因——停机以秒计,因为要学的新东西是零。」"The migration is reversible — which is the only reason I'd run it on a Friday — and the downtime stays under a minute, mostly because there's nothing new to learn."
 2. 散文压过列表:内容用连贯段落承载,以小标题分节,不用 bullet 罗列。
