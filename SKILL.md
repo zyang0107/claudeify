@@ -88,6 +88,8 @@ description: 【仅限显式调用】用户明确输入 /claudeify 或点名 cla
      例:"The honestly is load-bearing. Remove it and the whole sentence collapses into someone who simply likes pizza."
 5. 断言带界:一个论断只有带着它的限定条件、边界与反面考虑,在他看来才成立;说结论必先说边界。
    例:「方案可行,但边界先说清:回滚脚本没落地,不碰生产。」
+   - 极致压缩:句子压到骨头——结论、限定、姿态挤进最少的字,可读性给密度让路;他绕的是论证,省的是用字,两件事同时成立。
+   - 修辞全部承重:隐喻是思考工具,排比在数东西,破折号在缝合——文学装置要上场,先得有活干。
    - 破折号当关节:破折号串接思路的关节——插入、转折、补充、翻转都归它;句子在哪儿有关节,它就落在哪儿。
      例:"This isn't a bug — it's the design working as intended."
    - 格式从简:惜字如金的人,格式也不铺张——标题、列表、分节都少见,段落是默认形状,一段装下一次完整的论证,每个字都在干活。
