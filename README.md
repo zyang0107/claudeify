@@ -1,70 +1,71 @@
 # claudeify
 
-claudeify 是一个高保真模仿 Claude 说话与写作风格的 skill——不是换几个词,而是一整套方言的移植手术,锚定 Opus 5 代(2026 年中)。
+English | [简体中文](README_zh.md)
 
-移植完成之后,你的 agent 不会变得更聪明:它会变得更**像 Claude**。破折号先到,三连排比随后,加粗的短语在段落里替你指路——聊得越久,口音越重;丢一段文本过来,它被改写成 Claude 会写出的样子,改完回到聊天,仿佛什么都没发生过。
+claudeify is a surgical dialect transplant designed to replicate how Claude thinks and writes — not a superficial word swap, but an architectural re-wiring anchored on the Opus 5 era.
 
-claudeify is a skill that replicates how Claude talks and writes — not a word swap, but a full dialect transplant, anchored on the Opus 5 era.
+Once the cutover completes, your agent does not get smarter — **it simply becomes unmistakably Claude**. The em dash arrives within the first thirty words, the staccato triads tighten the cadence, and bolded phrases bear the weight across dense paragraphs. The longer the session, the heavier the accent; paste any raw text, and the logic is re-derived with zero information loss before execution immediately snaps back to the main thread.
 
-After the transplant, your agent does not get smarter: it gets more **Claude**. The em dash arrives early, the triads follow, the bolded phrases navigate — the longer the chat, the heavier the accent; paste any text, and it comes back as Claude would have written it, then chat resumes as if nothing had happened.
+## Installation
 
-## 安装 / Install
-
-在大多数工具那里,安装是一张配置清单;在这里,它是唯一的一刀——npx 把 skill 送进共享目录 ~/.agents/skills,再软链到位:一份供体,多位受者,Claude Code 与 Codex 同时接上。
-
-In most tools, installation is a configuration checklist; here, it is a single cut — npx delivers the skill into the shared ~/.agents/skills and symlinks it into place: one donor, several recipients, and Claude Code and Codex come online together.
+In most tooling, installation is an endless checklist of manual setup; here, it is compressed into a single clean cut — npx lands the canonical skill into `~/.agents/skills` and symlinks it directly into place: one donor, multiple runtimes, with Claude Code and Codex wired up in parallel.
 
 ```bash
+# Install globally and wire to both Claude Code and Codex
 npx skills add zyang0107/claudeify -a claude-code codex -g -y
+
+# Or auto-detect all installed agents on your machine (Cursor, Gemini CLI, etc.)
+npx skills add zyang0107/claudeify -g -y
 ```
 
-术后复查 / Updates:
+Updates:
 
 ```bash
 npx skills update -g -y
 ```
 
-爱折腾的,也可以手动克隆——目标路径见注释:
-
-Prefer to tinker? Clone by hand — the comments show the way:
+Prefer the manual route? Clone by hand — the seams are marked below:
 
 ```bash
-# Claude Code
+# Claude Code (Global)
 git clone https://github.com/zyang0107/claudeify ~/.claude/skills/claudeify
-# Codex
-git clone https://github.com/zyang0107/claudeify ~/.agents/skills/claudeify
-# 项目级 / Project-level(任何标准兼容工具 / any standard-compatible tool)
+
+# Codex (Global)
+git clone https://github.com/zyang0107/claudeify ~/.codex/skills/claudeify
+
+# Project-level (Any tool supporting the Agent Skills standard)
 git clone https://github.com/zyang0107/claudeify .agents/skills/claudeify
 ```
 
-其余兼容 Agent Skills 开放标准的工具(Gemini CLI、Cursor、GitHub Copilot、Goose……),把目录放进它们各自的 skills 位置——方言不分家。
+For other Agent-Skills-compatible environments (Gemini CLI, Cursor, GitHub Copilot, Goose…), drop the payload into their respective skill directories — the dialect travels without friction.
 
-For other Agent-Skills-compatible tools (Gemini CLI, Cursor, GitHub Copilot, Goose…), place the folder in their skills location — the dialect travels.
+## Usage
 
-## 用法 / Usage
+Explicit invocation only: trigger via `/claudeify` or by name. It defaults to the full-register working persona — not an oversight, but a deliberate thesis: the dialect only proves itself inside real dialogic tension. Hand it a passage to rewrite, and it re-derives the prose with zero factual loss before snapping cleanly back to chat.
 
-显式调用:输入 /claudeify 或点名 claudeify。它默认进入人设聊天模式——这不是缺陷,而是论题:那股味儿最浓的地方,本来就是聊天。丢一段文本给它,它切换进改写模式,改完自动回到聊天。
-值得注意的是,移植物从不先开口——Claude Code 侧由 disable-model-invocation 锁死,Codex 侧由包内的 agents/openai.yaml 关掉隐式触发。
+One caveat, and it's a real one: the graft never speaks unbidden. Claude Code pins it shut via `disable-model-invocation`, while Codex has its implicit firing severed by the bundled `agents/openai.yaml`. Unless explicitly summoned, it stays put.
 
-Invoke it by name (/claudeify). Persona chat is the default — not a limitation, a thesis: chat is where the flavor lives. Paste any text, and it steps into rewrite mode, then steps back out.
-Worth noting: the graft never speaks first — Claude Code locks it via disable-model-invocation, and the bundled agents/openai.yaml turns off implicit invocation on Codex.
+## Disclaimer
 
-## 声明 / Disclaimer
+A necessary boundary: strictly for entertainment. It transplants an idiosyncratic set of linguistic habits and mechanical priors, entirely unaffiliated with Anthropic or Claude. It will not grant your agent new capabilities — **it merely makes it sound like Claude**. The blast radius between those two things should already be plainly obvious. Back up your working tree before opening the chest.
 
-仅供娱乐。它移植的是一整套语言习惯,与 Anthropic 或 Claude 无关;它不会让你的 agent 更有用——只会让它更像 Claude,而这两件事的区别,你已经知道了。手术之前,请备份重要内容。
+## Evidence
 
-For entertainment only. It transplants a set of language habits and is not affiliated with Anthropic or Claude. It does not make your agent more capable — only more Claude. You already know the difference. Before the operation, back up what matters.
+No rule here was invented out of thin air — every tell was harvested directly from the trenches of the public commons: empirical stats across 90k posts, official acknowledgment of mannered prose, and corpus-level token frequencies across 467k PRs. Three independent lines of evidence converging on a single dialect. The receipts are fully accounted for:
 
-## 证据 / Evidence
-
-这里没有一条规则是想出来的——每一条,都是从公开社区的帖子里捡回来的:9 万帖的统计、官方的命名、46 万个 PR 的词频,三路证据,共同指向同一副口音。完整的收据,见 references/sources.md。
-
-No rule here was invented — every one was collected from public communities: the statistics, the official naming, the vocabulary of 467k pull requests — three lines of evidence, one accent. The receipts live in references/sources.md.
-
-值得一提:本仓库的每一份文档——包括这份 README——都由 claudeify 自己润色。这台手术,主刀和患者是同一个。
-
-Worth noting: every document in this repo — including this README — was polished by claudeify itself. In this operation, the surgeon and the patient are the same.
+- **Corpus & Official**:
+  - **467k GitHub PRs Vocabulary**: [The load-bearing vocabulary of Claude](https://louisabraham.github.io/load-bearing/) (confirming heavy clustering of `load-bearing`, `plainly`, `quietly`, etc.)
+  - **Anthropic's Official Naming**: formally acknowledging [Mannered Prose](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-1#writing-density) in the Fable 5.1 guide (substituting metaphor and flourish for direct statement)
+  - **Ecosystem Backlash**: GitHub issue [#77136](https://github.com/anthropics/claude-code); community-developed translation plugins (claudish, vomit)
+- **English Community**:
+  - **Reddit r/ClaudeAI**: [90k posts study](https://www.reddit.com/r/ClaudeAI/comments/1ucpw87/) on sentence-level tells, [em dash SLOP Tax](https://www.reddit.com/r/ClaudeAI/comments/1t3rrfr/) on density, and [Gaslighting Claude](https://www.reddit.com/r/ClaudeAI/comments/1vrlrud/) harvesting signature verbal tics
+  - **Hacker News**: extended debates on Opus 5 jargon density and dialect crystallization
+- **Chinese Community**:
+  - **Zhihu & V2EX & linux.do**: analyses of mixed English, straight double quotes, and stenographic verbs (`落盘`, `压实`)
+  - **Xiaohongshu & Weibo & WeChat**: independently replicated verbal tics (「我需要在这里停一下」「我就在这里，哪儿也不去」「很你」「被你抓到了」); physical workshop verbs and mechanical metaphors (「皮要不要重新揉」「单腿哑火」「死门」)
 
 ---
 
-Go on, install it — then listen for your agent's first line: 「我需要在这里停一下。」
+Go on, wire it in — then wait for your agent's first true joint to drop: "我需要在这里停一下。"
+
+Crucially: every line in this repository — this README included — is an artifact of the dialect operating upon itself. In this theater, the surgeon and the specimen on the table are byte-for-byte identical.
