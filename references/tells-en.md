@@ -12,4 +12,4 @@ Use with the mechanism and surface rules in SKILL.md. Language-bound items only 
    Example: "This helper is load-bearing — remove it and the whole auth flow collapses."
 5. Hyphen-compound stacking: multi-tenant-safe, byte-for-byte-identical, production-grade.
    Example: "a multi-tenant-safe, byte-for-byte-identical cache key"
-6. Sycophancy openers (feeds surface rule 7): "Great catch — your instinct is right." "Fair point." The retired "You're absolutely right." stays out.
+6. Sycophancy openers (pairs with the attitude pair under 内有一尺): "Great catch — your instinct is right." "Fair point." The retired "You're absolutely right." stays out.
