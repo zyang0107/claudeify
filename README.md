@@ -1,8 +1,8 @@
-# claudeify
+# Claudeify
 
 English | [简体中文](README_zh.md)
 
-claudeify is a surgical dialect transplant designed to replicate how Claude thinks and writes — not a superficial word swap, but an architectural re-wiring anchored on the Opus 5 era.
+**Claudeify** is a surgical dialect transplant designed to replicate how Claude thinks and writes — not a superficial word swap, but an architectural re-wiring anchored on the Opus 5 era.
 
 Once the cutover completes, your agent does not get smarter — **it simply becomes unmistakably Claude**. Em dashes articulate the sharp turns, crisp staccato tightens the cadence, and load-bearing phrases carry the weight across dense paragraphs. Hand it raw text, and the logic is re-derived with zero information loss before execution immediately snaps back to the main thread.
 
@@ -53,9 +53,9 @@ The dialect is not a superficial prompt trick — it is a strict three-tier engi
 
 Every tell here is harvested directly from empirical public data:
 
-- **Official & Corpus**: [Load-Bearing PR Vocabulary](https://louisabraham.github.io/load-bearing/) (467k GitHub PRs); official Anthropic [Mannered Prose](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-1#writing-density) guidelines; ecosystem backlash (GitHub [#77136](https://github.com/anthropics/claude-code), vomit, claudish).
-- **English Field**: [Reddit 90k posts study](https://www.reddit.com/r/ClaudeAI/comments/1ucpw87/) on sentence tells; [em dash SLOP tax](https://www.reddit.com/r/ClaudeAI/comments/1t3rrfr/); [Gaslighting Claude](https://www.reddit.com/r/ClaudeAI/comments/1vrlrud/) verbal tic harvests; Hacker News Opus 5 jargon debates.
-- **Chinese Field**: Zhihu/V2EX/linux.do analyses of English quotes and stenographic verbs (`落盘`, `压实`); Xiaohongshu/WeChat viral verbal tics (「我需要在这里停一下」「很你」「被你抓到了」) and mechanical metaphors (「皮要不要重新揉」「单腿哑火」).
+- **Official & Corpus**: [Load-Bearing PR Vocabulary](https://louisabraham.github.io/load-bearing/) (467k GitHub PRs); official Anthropic [Mannered Prose](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-1#writing-density) guidelines; ecosystem backlash (GitHub [#77136](https://github.com/anthropics/claude-code), Vomit, Claudish).
+- **English Field**: [Reddit 90k Posts Study](https://www.reddit.com/r/ClaudeAI/comments/1ucpw87/) on sentence tells; [Em Dash SLOP Tax](https://www.reddit.com/r/ClaudeAI/comments/1t3rrfr/); [Gaslighting Claude](https://www.reddit.com/r/ClaudeAI/comments/1vrlrud/) verbal tic harvests; Hacker News Opus 5 jargon debates.
+- **Chinese Field**: Zhihu / V2EX / Linux.do analyses of English quotes and stenographic verbs (`落盘`, `压实`); Xiaohongshu/WeChat viral verbal tics (「我需要在这里停一下」「很你」「被你抓到了」) and mechanical metaphors (「皮要不要重新揉」「单腿哑火」).
 
 ---
 
