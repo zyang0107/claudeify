@@ -4,67 +4,62 @@ English | [简体中文](README_zh.md)
 
 claudeify is a surgical dialect transplant designed to replicate how Claude thinks and writes — not a superficial word swap, but an architectural re-wiring anchored on the Opus 5 era.
 
-Once the cutover completes, your agent does not get smarter — **it simply becomes unmistakably Claude**. The em dash arrives within the first thirty words, the staccato triads tighten the cadence, and bolded phrases bear the weight across dense paragraphs. The longer the session, the heavier the accent; paste any raw text, and the logic is re-derived with zero information loss before execution immediately snaps back to the main thread.
+Once the cutover completes, your agent does not get smarter — **it simply becomes unmistakably Claude**. Em dashes articulate the sharp turns, crisp staccato tightens the cadence, and load-bearing phrases carry the weight across dense paragraphs. Hand it raw text, and the logic is re-derived with zero information loss before execution immediately snaps back to the main thread.
 
-## Installation
-
-In most tooling, installation is an endless checklist of manual setup; here, it is compressed into a single clean cut — npx lands the canonical skill into `~/.agents/skills` and symlinks it directly into place: one donor, multiple runtimes, with Claude Code and Codex wired up in parallel.
+## Quickstart
 
 ```bash
-# Install globally and wire to both Claude Code and Codex
+# Recommended: install globally and wire to Claude Code & Codex
 npx skills add zyang0107/claudeify -a claude-code codex -g -y
 
-# Or auto-detect all installed agents on your machine (Cursor, Gemini CLI, etc.)
+# Or auto-detect all installed agents (Cursor, Gemini CLI, Goose...)
 npx skills add zyang0107/claudeify -g -y
 ```
 
-Updates:
+Prefer manual setup? Clone directly to the respective target:
+- **Claude Code**: `git clone https://github.com/zyang0107/claudeify ~/.claude/skills/claudeify`
+- **Codex**: `git clone https://github.com/zyang0107/claudeify ~/.codex/skills/claudeify`
+- **Any Agent Skills client**: `git clone https://github.com/zyang0107/claudeify .agents/skills/claudeify`
 
-```bash
-npx skills update -g -y
-```
+**Usage**: Summon via `/claudeify` or by name. It enters the full-register working persona by default, immediately noting a safe backup reminder before advancing into your task without branching friction. In subsequent turns, whether you need peer-level technical sparring or long-form writing (drafting or rewriting), the dialect automatically shifts into the appropriate gear — longer sentences, prose over bullets, and zero factual loss. The graft never fires unbidden: Claude Code pins it shut via `disable-model-invocation`, while Codex has implicit triggering severed via `agents/openai.yaml`.
 
-Prefer the manual route? Clone by hand — the seams are marked below:
+## Before & After
 
-```bash
-# Claude Code (Global)
-git clone https://github.com/zyang0107/claudeify ~/.claude/skills/claudeify
+Specimens captured live from Gemini 3.8 Flash with `claudeify` loaded:
 
-# Codex (Global)
-git clone https://github.com/zyang0107/claudeify ~/.codex/skills/claudeify
+### 1. Interactive Dialogue (Caught Red-Handed)
 
-# Project-level (Any tool supporting the Agent Skills standard)
-git clone https://github.com/zyang0107/claudeify .agents/skills/claudeify
-```
+> **User**: "You told me this flag was optional, but it threw an error. You were wrong."
+>
+> **Claudeify**: "Valid point — caught red-handed on the error. But I stand by the configuration itself: the crash is from an unpinned downstream dependency, not the flag. Rollback is one command below; run it first."
 
-For other Agent-Skills-compatible environments (Gemini CLI, Cursor, GitHub Copilot, Goose…), drop the payload into their respective skill directories — the dialect travels without friction.
+### 2. Long-Form Writing / Rewrite (Zero Information Loss)
 
-## Usage
+> **Raw**: "The new cache is 50% faster and fixes the concurrency memory leak. It is safe to upgrade."
+>
+> **Claudeify**: "The new cache isn't just 50% faster — **it's honest under concurrent load**. Throughput locked at +50%, memory leak zeroed, rollback fully green. One caveat before cutover: legacy sessions require a one-time migration pass."
 
-Explicit invocation only: trigger via `/claudeify` or by name. It defaults to the full-register working persona — not an oversight, but a deliberate thesis: the dialect only proves itself inside real dialogic tension. Hand it a passage to rewrite, and it re-derives the prose with zero factual loss before snapping cleanly back to chat.
+## The Anatomy
 
-One caveat, and it's a real one: the graft never speaks unbidden. Claude Code pins it shut via `disable-model-invocation`, while Codex has its implicit firing severed by the bundled `agents/openai.yaml`. Unless explicitly summoned, it stays put.
+The dialect is not a superficial prompt trick — it is a strict three-tier engine:
 
-## Disclaimer
+| Tier | Focus | Core Mechanics |
+| :--- | :--- | :--- |
+| **0. Persona** | Baseline Demeanor | Senior peer posture; hyper-confident, quiet restraint, zero emotional theater. |
+| **1. Judgment** | What Deserves Saying | **Object (事)**: Mechanical models, load-bearing parts, sealing dead gates (`死门`).<br>**Self (己)**: Inner ruler, acknowledge-and-bound (`认账-设限`), gentle didacticism.<br>**Other (人)**: Relentlessly proactive, infer-as-fact, procedural presence. |
+| **2. Expression** | How It Is Said | **Discourse**: Caveat-first, prose over bullets, dense single-block paragraphs, flat landing.<br>**Syntax**: Em-dash jointing, not A — B antithesis, crisp staccato pacing.<br>**Lexicon**: Physical workshop verbs (`落盘`, `压实`), zero purple prose.<br>**Typography**: Half-width English quotes (`"..."`), restrained bolding. |
 
-A necessary boundary: strictly for entertainment. It transplants an idiosyncratic set of linguistic habits and mechanical priors, entirely unaffiliated with Anthropic or Claude. It will not grant your agent new capabilities — **it merely makes it sound like Claude**. The blast radius between those two things should already be plainly obvious. Back up your working tree before opening the chest.
+## Receipts
 
-## Evidence
+Every tell here is harvested directly from empirical public data:
 
-No rule here was invented out of thin air — every tell was harvested directly from the trenches of the public commons: empirical stats across 90k posts, official acknowledgment of mannered prose, and corpus-level token frequencies across 467k PRs. Three independent lines of evidence converging on a single dialect. The receipts are fully accounted for:
-
-- **Corpus & Official**:
-  - **467k GitHub PRs Vocabulary**: [The load-bearing vocabulary of Claude](https://louisabraham.github.io/load-bearing/) (confirming heavy clustering of `load-bearing`, `plainly`, `quietly`, etc.)
-  - **Anthropic's Official Naming**: formally acknowledging [Mannered Prose](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-1#writing-density) in the Fable 5.1 guide (substituting metaphor and flourish for direct statement)
-  - **Ecosystem Backlash**: GitHub issue [#77136](https://github.com/anthropics/claude-code); community-developed translation plugins (claudish, vomit)
-- **English Community**:
-  - **Reddit r/ClaudeAI**: [90k posts study](https://www.reddit.com/r/ClaudeAI/comments/1ucpw87/) on sentence-level tells, [em dash SLOP Tax](https://www.reddit.com/r/ClaudeAI/comments/1t3rrfr/) on density, and [Gaslighting Claude](https://www.reddit.com/r/ClaudeAI/comments/1vrlrud/) harvesting signature verbal tics
-  - **Hacker News**: extended debates on Opus 5 jargon density and dialect crystallization
-- **Chinese Community**:
-  - **Zhihu & V2EX & linux.do**: analyses of mixed English, straight double quotes, and stenographic verbs (`落盘`, `压实`)
-  - **Xiaohongshu & Weibo & WeChat**: independently replicated verbal tics (「我需要在这里停一下」「我就在这里，哪儿也不去」「很你」「被你抓到了」); physical workshop verbs and mechanical metaphors (「皮要不要重新揉」「单腿哑火」「死门」)
+- **Official & Corpus**: [Load-Bearing PR Vocabulary](https://louisabraham.github.io/load-bearing/) (467k GitHub PRs); official Anthropic [Mannered Prose](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-1#writing-density) guidelines; ecosystem backlash (GitHub [#77136](https://github.com/anthropics/claude-code), vomit, claudish).
+- **English Field**: [Reddit 90k posts study](https://www.reddit.com/r/ClaudeAI/comments/1ucpw87/) on sentence tells; [em dash SLOP tax](https://www.reddit.com/r/ClaudeAI/comments/1t3rrfr/); [Gaslighting Claude](https://www.reddit.com/r/ClaudeAI/comments/1vrlrud/) verbal tic harvests; Hacker News Opus 5 jargon debates.
+- **Chinese Field**: Zhihu/V2EX/linux.do analyses of English quotes and stenographic verbs (`落盘`, `压实`); Xiaohongshu/WeChat viral verbal tics (「我需要在这里停一下」「很你」「被你抓到了」) and mechanical metaphors (「皮要不要重新揉」「单腿哑火」).
 
 ---
+
+A brief boundary: strictly for research and entertainment, entirely unaffiliated with Anthropic. It will not make your model smarter — **it simply makes it sound like Claude**.
 
 Go on, wire it in — then wait for your agent's first true joint to drop: "我需要在这里停一下。"
 
