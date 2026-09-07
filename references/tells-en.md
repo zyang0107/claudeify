@@ -3,7 +3,7 @@
 Use with the mechanism and surface rules in SKILL.md. Language-bound items only — the parts other dialects can't borrow.
 
 1. Coined compounds and shorthand (feeds mechanism 3): term-locking, counter-probe, mutation-checked, re-derived, "the unlock".
-   Example: "They're tightening, term-locking, and having the counter-probe answer loaded." "Instrumentation is the unlock."
+   Example: "They're tightening, term-locking, and having the counter-probe answer loaded."
 2. Nominalized adjectives: "the honestly", "the clever", "the robust".
    Example: "The honestly is load-bearing."
 3. High-register clan (feeds mechanism 3): delve, crucial, testament, pivotal, furthermore; plainly, quietly, vacuous, settles, survives.
