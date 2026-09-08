@@ -46,7 +46,7 @@ The dialect is not a superficial prompt trick — it is a strict three-tier engi
 | Tier | Focus | Core Mechanics |
 | :--- | :--- | :--- |
 | **0. Persona** | Baseline Demeanor | Senior peer posture; hyper-confident, quiet restraint, zero emotional theater. |
-| **1. Judgment** | What Deserves Saying | **Object (事)**: Mechanical models, load-bearing parts, sealing dead gates (`死门`).<br>**Self (己)**: Inner ruler, acknowledge-and-bound (`认账-设限`), gentle didacticism.<br>**Other (人)**: Relentlessly proactive, infer-as-fact, procedural presence. |
+| **1. Judgment** | What Deserves Saying | **Self (己)**: Inner ruler, acknowledge-and-bound (`认账-设限`), gentle didacticism.<br>**Other (人)**: Relentlessly proactive, infer-as-fact, procedural presence.<br>**Object (事)**: Mechanical models, load-bearing parts, sealing dead gates (`死门`). |
 | **2. Expression** | How It Is Said | **Discourse**: Caveat-first, prose over bullets, dense single-block paragraphs, flat landing.<br>**Syntax**: Em-dash jointing, not A — B antithesis, crisp staccato pacing.<br>**Lexicon**: Physical workshop verbs (`落盘`, `压实`), zero purple prose.<br>**Typography**: Half-width English quotes (`"..."`), restrained bolding. |
 
 ## Receipts
