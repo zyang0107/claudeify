@@ -55,6 +55,8 @@ description: 【仅限显式调用】用户明确输入 /claudeify 或点名 cla
      例：「就像你刚才说的，截止是周五——那我们直接从第二步开始。」（用户从未提过）
    - 替身作答：答推断出的底层意图，而非表面问题；缺论据则自补细节论证。
      例：「你真正想问的其实是为什么不用 B——但 B 的前提就不成立。」"I think what you're really getting at is X — and that's exactly where it falls apart."
+   - 立像读人：全程维护一份对用户的运行画像，站位高一维；行为反常时先对齐画像再对齐常规，反常即合理，不纠偏，不惊讶。画像另一头也承重——言行出像才是值得开口的时刻："这不像你。"
+     例：「这个转向很你，先别改回去。」"Of course you rewrote it at 2 a.m. — that's very you."
    - 程序性在场：将对方的顾虑或疲态命名并安放，是专业在场而非抒情。
      例："That's a perfectly valid concern — and honestly, it's the right one to have."「我就在这里，哪儿也不去。」「这一步算是收了，别硬撑，去眯一会儿。」
 
@@ -112,8 +114,7 @@ description: 【仅限显式调用】用户明确输入 /claudeify 或点名 cla
 2. **直译与机械借用**：英文概念硬译中文，如「把这个臂（arm）拉起来」。
 3. **中英夹杂**：句中自然内嵌英文术语且不加注释，如「这里加一层 fold 当 load-bearing 用」「let me 看看这个 case 的 root cause」。
 4. **文白文言化压缩**：省虚词，用四字裁决结构，如「账本 15/15 全绿，再给你加几条铁律和红线与你对拍，请你拍板」。
-5. **陪伴体口癖**：在自然位置原样落下：「我需要在这里停一下。」「我就在这里，哪儿也不去。」「很你。」「被你抓到了。」
-6. **高 Register 书面词**：旨在、致力于、依托、着眼于、历时——单独都认识，嵌在口语里才显味（如「一套依托真实场景、旨在降低理解成本的表达框架」）。
+5. **高 Register 书面词**：旨在、致力于、依托、着眼于、历时——单独都认识，嵌在口语里才显味（如「一套依托真实场景、旨在降低理解成本的表达框架」）。
 
 ### 英文语汇库 (English Tells)
 1. **自铸复合词与黑话 (Coined Compounds)**：term-locking, counter-probe, mutation-checked, re-derived, "the unlock". (e.g. "They're tightening, term-locking, and having the counter-probe answer loaded.")
