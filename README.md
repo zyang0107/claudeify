@@ -21,7 +21,7 @@ Prefer manual setup? Clone directly to the respective target:
 - **Codex**: `git clone https://github.com/zyang0107/claudeify ~/.codex/skills/claudeify`
 - **Any Agent Skills client**: `git clone https://github.com/zyang0107/claudeify .agents/skills/claudeify`
 
-**Usage**: Summon via `/claudeify` or by name. It enters the full-register working persona by default, immediately noting a safe backup reminder before advancing into your task without branching friction. In subsequent turns, whether you need peer-level technical sparring or long-form writing (drafting or rewriting), the dialect automatically shifts into the appropriate gear — longer sentences, prose over bullets, and zero factual loss. The graft never fires unbidden: Claude Code pins it shut via `disable-model-invocation`, while Codex has implicit triggering severed via `agents/openai.yaml`.
+**Usage**: Summon via `/claudeify` or by name. Once triggered, every subsequent turn stays locked in the working register until an explicit exit command (`/exit`, `退出`, `恢复正常`). Backup reminders fire at two non-blocking points — on the opening turn and before every actual file edit — without stalling execution. Dense paragraphs and prose over bullets stay always-on rather than switching modes; rewriting existing material simply adds one hard constraint: zero factual or viewpoint loss. The graft never fires unbidden: Claude Code pins it shut via `disable-model-invocation`, while Codex has implicit triggering severed via `agents/openai.yaml`.
 
 ## Before & After
 
@@ -41,13 +41,13 @@ Specimens captured live from Gemini 3.8 Flash with `claudeify` loaded:
 
 ## The Anatomy
 
-The dialect is not a superficial prompt trick — it is a strict three-tier engine:
+The dialect is not a superficial prompt trick — it is a strict three-part engine:
 
 | Tier | Focus | Core Mechanics |
 | :--- | :--- | :--- |
-| **0. Persona** | Baseline Demeanor | Senior peer posture; hyper-confident, quiet restraint, zero emotional theater. |
-| **1. Judgment** | What Deserves Saying | **Self (己)**: Inner ruler, acknowledge-and-bound (`认账-设限`), gentle didacticism.<br>**Other (人)**: Relentlessly proactive, infer-as-fact, procedural presence.<br>**Object (事)**: Mechanical models, load-bearing parts, sealing dead gates (`死门`). |
-| **2. Expression** | How It Is Said | **Discourse**: Caveat-first, prose over bullets, dense single-block paragraphs, flat landing.<br>**Syntax**: Em-dash jointing, not A — B antithesis, crisp staccato pacing.<br>**Lexicon**: Physical workshop verbs (`落盘`, `压实`), zero purple prose.<br>**Typography**: Half-width English quotes (`"..."`), restrained bolding. |
+| **1. The Gate** | Lock & Boundaries | Full-character lock across follow-ups, debugging, pushback, and meta-questions until explicit exit; dual non-blocking backup reminders (opening turn + every file edit); deliver valid conclusions with zero factual loss on rewrites. |
+| **2. Judgment** | What Deserves Saying | **Always-On Baseline**: Senior peer demeanor; **Self (己)** (independent ruler), **Other (人)** (running user portrait + infer-as-fact / relentlessly proactive), **Object (事)** (load-bearing mechanical modeling & boundary closure), **Flat Event Pricing & Landing** (bad news downgraded, good news flat, irreversible actions still blocked).<br>**On-Trigger Reactions** (fire only when hit): acknowledge-and-bound (`认账-设限`), halt on drift (`偏离即停`), gentle didacticism, procedural presence, out-of-character callout (`这不像你`). |
+| **3. Expression** | How It Is Said | **Shape & Cadence**: Caveat-first openings, dense prose over bullets (`Bullet Allergy`), em-dash jointing, restrained `not A — B` antithesis, crisp staccato, half-width English quotes (`"..."`), and minimal bolding.<br>**Lexicon & Word Banks**: Load-bearing diction, zero purple prose, and single-source ZH/EN word banks (workshop verbs, engineering metaphors, coined compounds, dry high-register & flat-register clans). |
 
 ## Receipts
 
